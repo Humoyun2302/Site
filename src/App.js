@@ -3,20 +3,19 @@ import Section from './Section';
 import logo from './logo.svg';
 import './App.css';
 import Models from './Models';
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Page1 from './page1';
+import Page2 from './page2';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/> */}
-      {/* <Section/> */}
-      {/* <Models/> */}
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Page1/>}/>
-        <Route path="/" element={<Page2/>}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Page1 />} />
+          <Route path="/about" element={<Page2 />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );

@@ -1,8 +1,15 @@
 import React from "react";
+import Models from "./Models";
+import Navbar from "./navbar";
+import Section from "./Section";
 
-const Page1=() =>{
-    return(
-        <h1>Hello world</h1>
+const Page1 = () => {
+    return (
+        <div>
+            <Navbar/>
+            <Section/>
+            <Models/>
+        </div>
     )
 }
 
