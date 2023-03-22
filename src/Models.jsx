@@ -59,6 +59,8 @@ const Models = () => {
                 <h2 style={{ transform: 'translate(-990px,650px)' }}>W16 BOLIDE</h2>
             </div>
 
+            
+
         </Container>
 
     );

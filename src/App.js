@@ -1,5 +1,6 @@
 import Navbar from './navbar';
 import Section from './Section';
+import Footer from './Footer';
 import logo from './logo.svg';
 import './App.css';
 import Models from './Models';
