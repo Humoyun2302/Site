@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled('div')`
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
     width: 100%;
     background-color: #ffffff;
     display: flex; 
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 `
 
