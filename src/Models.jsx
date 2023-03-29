@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -23,12 +24,14 @@ const Img = styled.img`
     width: 400px;
     height: 400px;
     object-fit: cover;
+    padding-top: 70px;
 `
 
 const Models = () => {
     return (
         <Container>
 
+        <Link to="/mistral">
             <Block>
                 <Img
 
@@ -39,8 +42,9 @@ const Models = () => {
                 <h2 >W16 MISTRAL</h2>
 
             </Block>
+        </Link> 
 
-
+        <Link to="/centodieci">
             <Block>
                 <Img
 
@@ -49,25 +53,31 @@ const Models = () => {
                 />
                 <h2 >W16 CENTODIECI</h2>
             </Block>
+        </Link>    
 
-            <Block>
-                <Img
+            <Link to="/chiron">
+                <Block>
+                    <Img
 
-                    src="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-882c6c08377a7b8dd7d89f18109f88d1.webp"
-                    alt=""
-                />
-                <h2 >W16 CHIRON</h2>
-            </Block>
+                        src="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-882c6c08377a7b8dd7d89f18109f88d1.webp"
+                        alt=""
+                    />
+                    <h2 >W16 CHIRON</h2>
+                </Block>
+            </Link>
 
-            <Block>
-                <Img
+            <Link to="/bolide">
 
-                    src="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-8ec8c25e8330988b2448490879a1863c.webp"
-                    alt=""
-                />
+                <Block>
+                    <Img
 
-                <h2 >W16 BOLIDE</h2>
-            </Block>
+                        src="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-8ec8c25e8330988b2448490879a1863c.webp"
+                        alt=""
+                    />
+
+                    <h2 >W16 BOLIDE</h2>
+                </Block>
+            </Link>
 
 
 
