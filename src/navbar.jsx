@@ -2,60 +2,81 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Container = styled('div')`
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
+const Container = styled("div")`
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+`;
+
+const List = styled("ul")`
+  display: flex;
+  list-style: none;
+  gap: 2em;
+`;
+
+const Links = styled("a")`
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 15px 15px 10px;
+  font-size: 18px;
+  line-height: 25px;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    height: 2px;
     width: 100%;
-    background-color: #ffffff;
-    display: flex; 
-    align-items: center;
-    justify-content: space-around;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-`
+    display: block;
+    background: #000;
+    transition: 0.4s transform;
+    transform: scaleX(0);
+    transform-origin: left;
+    margin-top: 5px;
+  }
 
-const List = styled('ul')`
-        display: flex;
-        list-style: none;
-        gap: 2em;
-        `
-
-const Links = styled('a')`
-        text-decoration: none;
-        color: black;
-        `
+  &:hover::after,
+  &_active::after {
+    transform: scaleX(1);
+  }
+`;
 
 const links = [
   {
     name: "Home",
-    link: '/'
+    link: "/",
   },
   {
     name: "About",
-    link: '/about'
+    link: "/about",
   },
   {
     name: "Product",
-    link: '/product'
+    link: "/product",
   },
   {
     name: "Contact",
-    link: '/contact'
+    link: "/contact",
   },
-]
+];
 
 const Navbar = () => {
   return (
     <>
       <Container>
-
-
-
         <Link to="/">
           <img
-            width={180}
-            height={100}
+            width={150}
+            height={90}
             src="https://1000logos.net/wp-content/uploads/2020/02/Bugatti-Logo-1909.png"
             alt=""
           />
@@ -63,15 +84,14 @@ const Navbar = () => {
 
         <List>
           {links.map((item) => (
-            <li><Links href={item.link}>{item.name}</Links></li>
+            <li>
+              <Links href={item.link}>{item.name}</Links>
+            </li>
           ))}
         </List>
       </Container>
-
     </>
-
-
   );
-}
+};
 
-export default Navbar
+export default Navbar;
