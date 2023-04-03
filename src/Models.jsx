@@ -17,6 +17,8 @@ const Container = styled("div")`
 const Block = styled.div`
   margin: 0 40px;
   text-align: center;
+  color: black;
+  text-decoration: none;
 `;
 
 const Img = styled.img`
@@ -24,9 +26,9 @@ const Img = styled.img`
   height: 400px;
   object-fit: cover;
   padding-top: 70px;
+  transition: 0.4s;
   &:hover {
     transform: scale(1.1);
-    transition-duration: 1.5s;
   }
 `;
 

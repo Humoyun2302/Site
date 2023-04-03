@@ -45,9 +45,9 @@ const Img = styled.img`
   height: 400px;
   object-fit: cover;
   padding-top: 70px;
+  transition: 0.4s;
   &:hover {
     transform: scale(1.1);
-    transition-duration: 1.5s;
   }
 `;
 
@@ -91,7 +91,6 @@ const Centodieci = () => {
               src="https://avatars.mds.yandex.net/i?id=937cbaa7d7d980aa571fb17c3669f70c-5233561-images-thumbs&n=13"
               alt=""
             />
-
             <h2>CENTODIECI</h2>
           </Block>
         </Container>

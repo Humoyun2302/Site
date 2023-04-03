@@ -42,9 +42,9 @@ const Img = styled.img`
   height: 400px;
   object-fit: cover;
   padding-top: 70px;
+  transition: 0.4s;
   &:hover {
     transform: scale(1.1);
-    transition-duration: 1.5s;
   }
 `;
 

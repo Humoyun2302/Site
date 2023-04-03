@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled("div")`
@@ -21,7 +21,7 @@ const List = styled("ul")`
   gap: 2em;
 `;
 
-const Links = styled("a")`
+const Links = styled(Link)`
   font-size: 18px;
   color: #000;
   font-weight: 500;
@@ -70,6 +70,7 @@ const links = [
 ];
 
 const Navbar = () => {
+  const { pathname } = useLocation();
   return (
     <>
       <Container>
@@ -85,7 +86,7 @@ const Navbar = () => {
         <List>
           {links.map((item) => (
             <li>
-              <Links href={item.link}>{item.name}</Links>
+              <Links to={item.link}>{item.name}</Links>
             </li>
           ))}
         </List>
