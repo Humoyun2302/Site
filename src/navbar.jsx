@@ -6,7 +6,7 @@ const Container = styled("div")`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 3;
   width: 100%;
   background-color: #ffffff;
   display: flex;

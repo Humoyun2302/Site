@@ -61,7 +61,6 @@ const Models = () => {
         <Link to={d.link}>
           <Block>
             <Img src={d.img} alt="" />
-
             <h2>{d.title}</h2>
           </Block>
         </Link>

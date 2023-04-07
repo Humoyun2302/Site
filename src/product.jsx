@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 import styled from "styled-components";
 
 const BG = styled.div`
-  background: url(https://www.bugatti.com/fileadmin/_processed_/sei/p387/se-image-3c925a410b2f7f0f0b6fa014688b56c6.webp);
+  background: url(https://i.gaw.to/content/photos/41/88/418873-bugatti-expose-ses-six-voitures-totalisant-50-millions.jpg?460x287);
   width: 100%;
   height: 600px;
   background-position: center;
@@ -47,7 +47,7 @@ const Img = styled.img`
   padding-top: 70px;
   transition: 0.4s;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
   }
 `;
 
@@ -57,7 +57,7 @@ const Product = () => {
       <Navbar />
       <section>
         <BG>
-          <Title>CONTACT</Title>
+          <Title>PRODUCT</Title>
         </BG>
       </section>
 

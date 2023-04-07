@@ -13,8 +13,15 @@ import Centodieci from "./page5";
 import Mistral from "./page6";
 import Product from "./product";
 import Contact from "./contact";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   return (
     <div className="App">
       <BrowserRouter>

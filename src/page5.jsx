@@ -47,7 +47,7 @@ const Img = styled.img`
   padding-top: 70px;
   transition: 0.4s;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
   }
 `;
 
