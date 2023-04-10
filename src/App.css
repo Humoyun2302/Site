@@ -45,5 +45,5 @@
   height: 10px;
   background: rgb(186, 186, 186);
   transform-origin: 0%;
-  z-index: 10;
+  z-index: 1000;
 }

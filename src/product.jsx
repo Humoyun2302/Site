@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "./navbar";
 import styled from "styled-components";
+import Footer from "./Footer";
 
 const BG = styled.div`
-  background: url(https://i.gaw.to/content/photos/41/88/418873-bugatti-expose-ses-six-voitures-totalisant-50-millions.jpg?460x287);
+  background: url(https://gtspirit.com/wp-content/uploads/2021/06/Bugatti-Legends-e1623270582862.jpg);
   width: 100%;
   height: 600px;
   background-position: center;
@@ -12,8 +13,8 @@ const BG = styled.div`
 `;
 
 const Title = styled("h1")`
-  font-size: 40px;
-  color: black;
+  font-size: 50px;
+  color: #000000ca;
   font-family: "Gill Sans", sans-serif;
 `;
 
@@ -22,12 +23,7 @@ const Section = styled.section`
 `;
 
 const Container = styled("div")`
-  max-width: 1440px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -117,6 +113,7 @@ const Product = () => {
           <p>2022-present</p>
         </Block>
       </Container>
+      <Footer />
     </Section>
   );
 };

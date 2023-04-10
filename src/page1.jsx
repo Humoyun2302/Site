@@ -15,7 +15,6 @@ const Page1 = () => {
   });
   return (
     <div>
-      <motion.div className="progress-bar" style={{ scaleX }} />
       <Navbar />
       <Section />
       <Models />

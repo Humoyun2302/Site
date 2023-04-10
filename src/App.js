@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <motion.div className="progress-bar" style={{ scaleX }} />
         <Routes>
           <Route path="/" element={<Page1 />} />
           <Route path="/about" element={<Page2 />} />
