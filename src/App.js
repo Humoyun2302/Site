@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <motion.div className="progress-bar" style={{ scaleX }} />
         <Routes>
           <Route path="/" element={<Page1 />} />
@@ -36,6 +37,7 @@ function App() {
           <Route path="/centodieci" element={<Centodieci />} />
           <Route path="/mistral" element={<Mistral />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

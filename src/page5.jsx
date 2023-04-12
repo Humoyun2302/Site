@@ -12,7 +12,7 @@ const BG = styled.div`
 `;
 
 const Section = styled.section`
-  height: 1400px;
+  height: 1600px;
 `;
 
 const Title = styled.h1`
@@ -55,7 +55,6 @@ const Centodieci = () => {
   return (
     <div>
       <Section>
-        <Navbar />
         <BG>
           <Title>BUGATTI CENTODIECI</Title>
         </BG>

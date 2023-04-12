@@ -15,10 +15,8 @@ const Page1 = () => {
   });
   return (
     <div>
-      <Navbar />
       <Section />
       <Models />
-      <Footer />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled("div")`
-  max-width: 1440px;
+  max-width: 1700px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -12,6 +12,7 @@ const Container = styled("div")`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-family: "Gill Sans", sans-serif;
 `;
 
 const Block = styled.div`
@@ -28,7 +29,7 @@ const Img = styled.img`
   padding-top: 70px;
   transition: 0.4s;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
 `;
 

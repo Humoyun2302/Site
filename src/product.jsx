@@ -14,12 +14,12 @@ const BG = styled.div`
 
 const Title = styled("h1")`
   font-size: 50px;
-  color: #000000ca;
+  color: #000000c5;
   font-family: "Gill Sans", sans-serif;
 `;
 
 const Section = styled.section`
-  height: 1400px;
+  height: 1800px;
 `;
 
 const Container = styled("div")`
@@ -38,7 +38,7 @@ const Block = styled.div`
 
 const Img = styled.img`
   width: 400px;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
   padding-top: 70px;
   transition: 0.4s;
@@ -50,7 +50,6 @@ const Img = styled.img`
 const Product = () => {
   return (
     <Section>
-      <Navbar />
       <section>
         <BG>
           <Title>PRODUCT</Title>
@@ -113,7 +112,6 @@ const Product = () => {
           <p>2022-present</p>
         </Block>
       </Container>
-      <Footer />
     </Section>
   );
 };

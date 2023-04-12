@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./navbar";
+import Footer from "./Footer";
 
 const BG = styled.div`
   background: url(https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-d329c570ea6f5e77810bc0318eb4b788.webp);
@@ -51,7 +52,6 @@ const Img = styled.img`
 const Chiron = () => {
   return (
     <div>
-      <Navbar />
       <BG>
         <Title>CHIRON MODELS</Title>
       </BG>

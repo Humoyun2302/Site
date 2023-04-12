@@ -1,18 +1,29 @@
 import React from "react";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
-// import { GrInstagram } from "react-icons/gr";
 
 import Navbar from "./navbar";
 import styled from "styled-components";
 
 const Title = styled("h1")`
-  font-size: 40px;
-  color: #000000;
+  text-align: left;
+  padding-top: 70px;
+  padding-left: 110px;
+  font-size: 42px;
+  color: #202020;
   font-family: "Gill Sans", sans-serif;
 `;
 
+const BG = styled.div`
+  background: url(https://www.bugatti.com/fileadmin/_processed_/sei/p8/se-image-a86882eeff762b74a0f923109664380a.webp);
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
 const Section = styled.section`
-  padding: 0 50px;
+  /* padding: 0 50px; */
 `;
 
 const Left = styled("div")`
@@ -48,35 +59,87 @@ const Box = styled("div")`
   justify-content: space-around;
 `;
 
+const Order = styled.div`
+  background: url(https://www.bugatti.com/fileadmin/_processed_/sei/p8/se-image-5a14df8b7706ab49a62155630f53c252.webp);
+  width: 100%;
+  height: 500px;
+  padding: 0 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
+const Title2 = styled.h4`
+  text-align: left;
+  padding-top: 70px;
+  font-size: 50px;
+  color: #202020;
+  font-family: "Gill Sans", sans-serif;
+  margin-bottom: 50px;
+`;
+
+const Button = styled.button`
+  width: 200px;
+  height: 50px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 2px solid black;
+  font-size: 22px;
+  transition: 0.5s;
+  margin-top: 200px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: #fff;
+  }
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Input = styled.input`
+  padding: 10px 15px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+`;
+
+const BtnSubmit = styled.button`
+  background: black;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+`;
+
 const Contact = () => {
   return (
     <Section>
-      <Navbar />
       <section>
-        <Title>CONTACT</Title>
+        <BG>
+          <Title>CONTACT</Title>
+        </BG>
       </section>
       <Box>
         <Left>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-            dignissimos iste suscipit harum corporis corrupti quasi nesciunt.
-            Earum velit expedita, ab recusandae vero placeat asperiores eveniet
-            explicabo quia voluptas. Repudiandae tempora tenetur placeat nobis
-            cumque eos magnam, temporibus molestiae, qui officia architecto
-            dolores aliquid odit ipsa alias vero expedita. Quis, animi
-            consequuntur. Aut alias, ipsa deleniti pariatur, qui ab quidem earum
-            illum accusantium ut id obcaecati voluptate eligendi. Labore tempora
-            qui quaerat. Perferendis dignissimos voluptatibus inventore soluta
-            aperiam quidem, voluptas natus laudantium velit ipsam excepturi quas
-            laboriosam ducimus officia sint perspiciatis necessitatibus fuga
-            nam! Amet suscipit minima nesciunt quibusdam quaerat!
-          </p>
+          <Form action="">
+            <Input type="text" placeholder="Your Name" />
+            <Input type="email" placeholder="Your Email" />
+            <Input type="text" placeholder="Your Number" />
+            <BtnSubmit type="submit">send</BtnSubmit>
+          </Form>
         </Left>
         <Right>
-          <p>
-            <AiFillMail /> bugatti
-          </p>
-
           <p>
             <a href="tel:+998 99 666 99 66">
               <AiFillPhone />
@@ -90,6 +153,13 @@ const Contact = () => {
           </p>
         </Right>
       </Box>
+      <Order>
+        <Title2>
+          <p>YOUR CAREER AT</p>
+          <p>BUGATTI</p>
+        </Title2>
+        <Button>Apply now</Button>
+      </Order>
     </Section>
   );
 };
