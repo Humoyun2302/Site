@@ -20,6 +20,11 @@ const Block = styled.div`
   text-align: center;
   color: black;
   text-decoration: none;
+
+  & h2 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
 `;
 
 const Img = styled.img`

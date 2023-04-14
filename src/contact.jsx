@@ -1,8 +1,8 @@
 import React from "react";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
-
-import Navbar from "./navbar";
 import styled from "styled-components";
+
+import Maps from "./Maps";
 
 const Title = styled("h1")`
   text-align: left;
@@ -22,9 +22,7 @@ const BG = styled.div`
   background-size: cover;
 `;
 
-const Section = styled.section`
-  /* padding: 0 50px; */
-`;
+const Section = styled.section``;
 
 const Left = styled("div")`
   width: 45%;
@@ -124,43 +122,46 @@ const BtnSubmit = styled.button`
 
 const Contact = () => {
   return (
-    <Section>
-      <section>
-        <BG>
-          <Title>CONTACT</Title>
-        </BG>
-      </section>
-      <Box>
-        <Left>
-          <Form action="">
-            <Input type="text" placeholder="Your Name" />
-            <Input type="email" placeholder="Your Email" />
-            <Input type="text" placeholder="Your Number" />
-            <BtnSubmit type="submit">send</BtnSubmit>
-          </Form>
-        </Left>
-        <Right>
-          <p>
-            <a href="tel:+998 99 666 99 66">
-              <AiFillPhone />
-              +998 99 666 99 66
-            </a>
-          </p>
-          <p>
-            <a href="tel:+998 99 777 77 77">
-              <AiFillPhone /> +998 99 777 77 77
-            </a>
-          </p>
-        </Right>
-      </Box>
-      <Order>
-        <Title2>
-          <p>YOUR CAREER AT</p>
-          <p>BUGATTI</p>
-        </Title2>
-        <Button>Apply now</Button>
-      </Order>
-    </Section>
+    <>
+      <Section>
+        <section>
+          <BG>
+            <Title>CONTACT</Title>
+          </BG>
+        </section>
+        <Box>
+          <Left>
+            <Form action="">
+              <Input type="text" placeholder="Your Name" />
+              <Input type="email" placeholder="Your Email" />
+              <Input type="text" placeholder="Your Number" />
+              <BtnSubmit type="submit">send</BtnSubmit>
+            </Form>
+          </Left>
+          <Right>
+            <p>
+              <a href="tel:+998 99 666 99 66">
+                <AiFillPhone />
+                +998 99 666 99 66
+              </a>
+            </p>
+            <p>
+              <a href="tel:+998 99 777 77 77">
+                <AiFillPhone /> +998 99 777 77 77
+              </a>
+            </p>
+          </Right>
+        </Box>
+        <Order>
+          <Title2>
+            <p>YOUR CAREER AT</p>
+            <p>BUGATTI</p>
+          </Title2>
+          <Button>Apply now</Button>
+        </Order>
+      </Section>
+      <Maps />
+    </>
   );
 };
 

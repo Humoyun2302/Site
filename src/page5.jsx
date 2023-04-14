@@ -38,16 +38,21 @@ const Container = styled("div")`
 const Block = styled.div`
   margin: 0 40px;
   text-align: center;
+  & h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: "Gill Sans", sans-serif;
+  }
 `;
 
 const Img = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   object-fit: cover;
   padding-top: 70px;
   transition: 0.4s;
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.04);
   }
 `;
 

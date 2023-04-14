@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Navbar from "./navbar";
 import Footer from "./Footer";
 
+const Section = styled.section`
+  /* padding: 0 50px; */
+`;
+
 const BG = styled.div`
   background: url(https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-d329c570ea6f5e77810bc0318eb4b788.webp);
   width: 100%;
@@ -26,6 +30,8 @@ const Container = styled("div")`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 500px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
@@ -36,22 +42,28 @@ const Container = styled("div")`
 const Block = styled.div`
   margin: 0 40px;
   text-align: center;
+
+  & h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: "Gill Sans", sans-serif;
+  }
 `;
 
 const Img = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 600px;
   object-fit: cover;
   padding-top: 70px;
   transition: 0.4s;
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.03);
   }
 `;
 
 const Chiron = () => {
   return (
-    <div>
+    <Section>
       <BG>
         <Title>CHIRON MODELS</Title>
       </BG>
@@ -90,7 +102,7 @@ const Chiron = () => {
           <h2>CHIRON</h2>
         </Block>
       </Container>
-    </div>
+    </Section>
   );
 };
 

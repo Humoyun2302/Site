@@ -3,8 +3,10 @@ import Section from "./Section";
 import Footer from "./Footer";
 import logo from "./logo.svg";
 import "./App.css";
-import Models from "./Models";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Models from "./Models";
 import Page1 from "./page1";
 import Page2 from "./page2";
 import Chiron from "./page3";
@@ -13,7 +15,6 @@ import Centodieci from "./page5";
 import Mistral from "./page6";
 import Product from "./product";
 import Contact from "./contact";
-import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
   const { scrollYProgress } = useScroll();

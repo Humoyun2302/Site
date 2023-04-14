@@ -9,7 +9,8 @@ import {
 
 const Footers = styled.footer`
   background: #000;
-  padding: 50px 0;
+  padding: 25px 0;
+  margin-top: 50px;
 `;
 
 const IconList = styled.ul`
