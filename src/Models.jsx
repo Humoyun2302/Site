@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import ModalForm from "./Modal/Modal";
+import { useState } from "react";
 const Container = styled("div")`
   max-width: 1700px;
   width: 100%;
@@ -39,6 +40,10 @@ const Img = styled.img`
 `;
 
 const Models = () => {
+  const [modal, setModal] = useState(true);
+  const toggle = () => {
+    setModal(!modal);
+  };
   const data = [
     {
       link: "/mistral",
@@ -71,6 +76,7 @@ const Models = () => {
           </Block>
         </Link>
       ))}
+      <ModalForm modal={modal} toggle={toggle} />
     </Container>
   );
 };

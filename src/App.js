@@ -5,7 +5,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import Models from "./Models";
 import Page1 from "./page1";
 import Page2 from "./page2";
