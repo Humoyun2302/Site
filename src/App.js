@@ -15,6 +15,8 @@ import Centodieci from "./page5";
 import Mistral from "./page6";
 import Product from "./product";
 import Contact from "./contact";
+import LandingPageContainer from "./Dashboard/containers/DashboardContainer";
+// import LiveChat from "react-livechat";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -23,6 +25,13 @@ function App() {
     damping: 30,
     restDelta: 0.001,
   });
+
+  // const chatProps = {
+  //   license: 15366510,
+  //   group: YOUR_LIVECHAT_GROUP_NUMBER,
+  //   name: "John Doe",
+  //   email: "john@example.com",
+  // };
   return (
     <div className="App">
       <BrowserRouter>
@@ -37,7 +46,9 @@ function App() {
           <Route path="/bolide" element={<Bolide />} />
           <Route path="/centodieci" element={<Centodieci />} />
           <Route path="/mistral" element={<Mistral />} />
+          <Route path="/systems" element={<LandingPageContainer />} />
         </Routes>
+        {/* <LiveChat {...chatProps} /> */}
         <Footer />
       </BrowserRouter>
     </div>
