@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Modal, ModalBody } from "reactstrap";
 import { X } from "react-feather";
+import "./Modal.css";
+import ModalMap from "./ModalMap";
 const Container = styled("div")``;
 
 const BuyModal = styled(Modal)`
@@ -70,52 +72,71 @@ const ModalForm = ({ toggle, modal, data }) => {
             </Right>
           </Section>
           <Payment>
-            <label htmlFor="card-number">Enter the Card number:</label>
-            <input
-              type="text"
-              id="card-number"
-              style={{
-                borderRadius: "8px",
-                border: "2px solid #15c69a",
-                fontSize: "24px",
-              }}
-            />
-            <div
-              style={{ display: "flex", margin: "10px", alignItems: "center" }}
-            >
-              <label htmlFor="card-number">Expiration date:</label>
-              <input
-                type="text"
-                style={{
-                  margin: "0px 10px",
-                  fontSize: "20px",
-                  borderRadius: "8px",
-                  border: "2px solid #15c69a",
-                }}
-              />
-              <label htmlFor="card-number">CVV:</label>
-              <input
-                type="text"
-                style={{
-                  margin: "0px 10px",
-                  fontSize: "20px",
-                  borderRadius: "8px",
-                  border: "2px solid #15c69a",
-                }}
-              />
-            </div>
-            <button
-              style={{
-                fontSize: "26px",
-                color: "white",
-                borderRadius: "8px",
-                backgroundColor: "#15c69a",
-                border: "none",
-              }}
-            >
-              Pay!
-            </button>
+            <form class="credit-card">
+              <div class="form-header">
+                <h4 class="title">Credit card detail</h4>
+              </div>
+
+              <div class="form-body">
+                <input
+                  type="text"
+                  class="card-number"
+                  placeholder="Card Number"
+                />
+
+                <div class="date-field">
+                  <div class="month">
+                    <select name="Month">
+                      <option value="january">January</option>
+                      <option value="february">February</option>
+                      <option value="march">March</option>
+                      <option value="april">April</option>
+                      <option value="may">May</option>
+                      <option value="june">June</option>
+                      <option value="july">July</option>
+                      <option value="august">August</option>
+                      <option value="september">September</option>
+                      <option value="october">October</option>
+                      <option value="november">November</option>
+                      <option value="december">December</option>
+                    </select>
+                  </div>
+                  <div class="year">
+                    <select name="Year">
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="card-verification">
+                  <div class="cvv-input">
+                    <input type="text" placeholder="CVV" />
+                  </div>
+                  <div class="cvv-details">
+                    <p>
+                      3 or 4 digits usually found <br /> on the signature strip
+                    </p>
+                  </div>
+                </div>
+
+                <button type="submit" class="proceed-btn">
+                  <a href="#">Proceed</a>
+                </button>
+                <button type="submit" class="paypal-btn">
+                  <a href="#">Pay With</a>
+                </button>
+              </div>
+            </form>
           </Payment>
+          <ModalMap />
         </ModalBody>
       </BuyModal>
     </Container>
