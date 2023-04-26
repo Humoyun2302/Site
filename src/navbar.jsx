@@ -67,6 +67,10 @@ const links = [
     name: "Contact",
     link: "/contact",
   },
+  {
+    name: "Systems",
+    link: "/systems",
+  },
 ];
 
 const Navbar = () => {
