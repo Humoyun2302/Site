@@ -3,11 +3,13 @@ import { Modal, ModalBody } from "reactstrap";
 import { X } from "react-feather";
 import "./Modal.css";
 import ModalMap from "./ModalMap";
+import { map } from "leaflet";
+
 const Container = styled("div")``;
 
 const BuyModal = styled(Modal)`
   z-index: 999;
-  max-width: 909px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   top: 26px;
@@ -32,6 +34,8 @@ const Right = styled("div")`
 
 const BrandImage = styled("img")`
   height: 400px;
+  width: 550px;
+  object-fit: cover;
 `;
 
 const Payment = styled("div")`
@@ -41,6 +45,7 @@ const Payment = styled("div")`
 `;
 
 const ModalForm = ({ toggle, modal, data }) => {
+  console.log(data);
   return (
     <Container>
       <BuyModal isOpen={modal} toggle={toggle} size="xl">
@@ -56,18 +61,13 @@ const ModalForm = ({ toggle, modal, data }) => {
           </ModalHeader>
           <Section>
             <Left>
-              <BrandImage src="https://images.unsplash.com/photo-1627454820903-9646d6ca61f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnVnYXR0aXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+              <BrandImage src={data.img} alt="" />
             </Left>
             <Right>
               <div>
-                <h3 style={{ fontSize: "30px" }}>Bugatti</h3>
-                <p style={{ fontSize: "20px" }}>$50000</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                  quo rerum fuga nisi consequuntur necessitatibus numquam, illum
-                  commodi quam magnam maiores iste officiis molestiae
-                  perferendis officia tenetur amet ipsam. Numquam.
-                </p>
+                <h3 style={{ fontSize: "30px" }}>{data.name}</h3>
+                <p style={{ fontSize: "20px" }}>{data.price} $</p>
+                <p>{data.text}</p>
               </div>
             </Right>
           </Section>

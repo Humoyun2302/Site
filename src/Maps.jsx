@@ -5,8 +5,8 @@ import "leaflet/dist/leaflet.css";
 const position = [46.572709, 1.950498];
 
 const Box = styled(MapContainer)`
-  margin: 0 100px;
-  width: 700px;
+  margin: 100px;
+  width: 90%;
   height: 400px;
 `;
 

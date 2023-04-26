@@ -40,7 +40,7 @@ const Img = styled.img`
 `;
 
 const Models = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   const toggle = () => {
     setModal(!modal);
   };
@@ -69,14 +69,15 @@ const Models = () => {
   return (
     <Container>
       {data.map((d) => (
-        <Link to={d.link}>
-          <Block>
-            <Img src={d.img} alt="" />
-            <h2>{d.title}</h2>
-          </Block>
-        </Link>
+        <>
+          <Link to={d.link}>
+            <Block onClick={toggle}>
+              <Img src={d.img} alt="" />
+              <h2>{d.title}</h2>
+            </Block>
+          </Link>
+        </>
       ))}
-      <ModalForm modal={modal} toggle={toggle} />
     </Container>
   );
 };

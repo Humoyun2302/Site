@@ -1,5 +1,8 @@
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
+import { map } from "leaflet";
+
 const ModalMap = () => {
+ 
   return (
     <MapContainer
       center={[51.505, -0.09]}

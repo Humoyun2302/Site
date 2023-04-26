@@ -61,6 +61,7 @@ const Order = styled.div`
   background: url(https://www.bugatti.com/fileadmin/_processed_/sei/p8/se-image-5a14df8b7706ab49a62155630f53c252.webp);
   width: 100%;
   height: 500px;
+  margin: 4rem 0;
   padding: 0 60px;
   background-position: center;
   background-repeat: no-repeat;

@@ -11,7 +11,8 @@ const Container = styled("div")`
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  padding-top: 20px;
+  text-align: center;
+  padding-top: 100px;
   font-family: "Gill Sans", sans-serif;
 `;
 

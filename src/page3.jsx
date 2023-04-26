@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "./navbar";
 import Footer from "./Footer";
+import ModalForm from "./Modal/Modal";
 
 const Section = styled.section`
   /* padding: 0 50px; */
@@ -61,46 +62,62 @@ const Img = styled.img`
   }
 `;
 
+const d = [
+  {
+    img: "https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-2a7ae35b418017cc22e45025cf8693ab.webp",
+    name: "CHIRON SUPER SPORT",
+    price: 210000,
+    text: "The Bugatti is a high-performance sports car known for its exceptional speed, luxurious design, and advanced engineering. With its sleek and aerodynamic body, the Bugatti is a true masterpiece of automotive engineering. It boasts a powerful engine capable of producing incredible horsepower, allowing it to reach speeds that few other cars can match. The interior is equally impressive, featuring high-quality materials, state-of-the-art technology, and a range of comfort features that make driving a Bugatti a truly unforgettable experience. Whether you're a car enthusiast or simply appreciate the finer things in life, the Bugatti is a car that will take your breath away.",
+  },
+  {
+    img: "https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-c9d00c8ae93bc4074d31107ad79e6823.webp",
+    name: "CHIRON PUR SPORT",
+    price: 210000,
+    text: "The Bugatti is a high-performance sports car known for its exceptional speed, luxurious design, and advanced engineering. With its sleek and aerodynamic body, the Bugatti is a true masterpiece of automotive engineering. It boasts a powerful engine capable of producing incredible horsepower, allowing it to reach speeds that few other cars can match. The interior is equally impressive, featuring high-quality materials, state-of-the-art technology, and a range of comfort features that make driving a Bugatti a truly unforgettable experience. Whether you're a car enthusiast or simply appreciate the finer things in life, the Bugatti is a car that will take your breath away.",
+  },
+  {
+    img: "https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-82b2449917fb9b170195e48aa533b252.webp",
+    name: "SHIRON SPORT",
+    price: 210000,
+    text: "The Bugatti is a high-performance sports car known for its exceptional speed, luxurious design, and advanced engineering. With its sleek and aerodynamic body, the Bugatti is a true masterpiece of automotive engineering. It boasts a powerful engine capable of producing incredible horsepower, allowing it to reach speeds that few other cars can match. The interior is equally impressive, featuring high-quality materials, state-of-the-art technology, and a range of comfort features that make driving a Bugatti a truly unforgettable experience. Whether you're a car enthusiast or simply appreciate the finer things in life, the Bugatti is a car that will take your breath away.",
+  },
+  {
+    img: "https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-82b2449917fb9b170195e48aa533b252.webp",
+    name: "SHIRON SPORT",
+    price: 210000,
+    text: "The Bugatti is a high-performance sports car known for its exceptional speed, luxurious design, and advanced engineering. With its sleek and aerodynamic body, the Bugatti is a true masterpiece of automotive engineering. It boasts a powerful engine capable of producing incredible horsepower, allowing it to reach speeds that few other cars can match. The interior is equally impressive, featuring high-quality materials, state-of-the-art technology, and a range of comfort features that make driving a Bugatti a truly unforgettable experience. Whether you're a car enthusiast or simply appreciate the finer things in life, the Bugatti is a car that will take your breath away.",
+  },
+  {
+    img: "https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-c0102a8671eca07fea7e40059afc4083.webp",
+    name: "CHIRON",
+    price: 210000,
+    text: "The Bugatti is a high-performance sports car known for its exceptional speed, luxurious design, and advanced engineering. With its sleek and aerodynamic body, the Bugatti is a true masterpiece of automotive engineering. It boasts a powerful engine capable of producing incredible horsepower, allowing it to reach speeds that few other cars can match. The interior is equally impressive, featuring high-quality materials, state-of-the-art technology, and a range of comfort features that make driving a Bugatti a truly unforgettable experience. Whether you're a car enthusiast or simply appreciate the finer things in life, the Bugatti is a car that will take your breath away.",
+  },
+];
+
 const Chiron = () => {
+  const [datas, setDatas] = useState([]);
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  const handleClick = (d) => {
+    setDatas(d);
+    setModal(true);
+  };
   return (
     <Section>
       <BG>
         <Title>CHIRON MODELS</Title>
       </BG>
       <Container>
-        <Block>
-          <Img
-            src="https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-2a7ae35b418017cc22e45025cf8693ab.webp"
-            alt=""
-          />
-
-          <h2>CHIRON SUPER SPORT</h2>
-        </Block>
-
-        <Block>
-          <Img
-            src="https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-c9d00c8ae93bc4074d31107ad79e6823.webp"
-            alt=""
-          />
-          <h2>CHIRON PUR SPORT</h2>
-        </Block>
-
-        <Block>
-          <Img
-            src="https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-82b2449917fb9b170195e48aa533b252.webp"
-            alt=""
-          />
-          <h2>SHIRON SPORT</h2>
-        </Block>
-
-        <Block>
-          <Img
-            src="https://www.bugatti.com/fileadmin/_processed_/sei/p469/se-image-c0102a8671eca07fea7e40059afc4083.webp"
-            alt=""
-          />
-
-          <h2>CHIRON</h2>
-        </Block>
+        {d.map((item, index) => (
+          <Block key={index} onClick={() => handleClick(item)}>
+            <Img src={item.img} alt="" />
+            <h2>{item.name}</h2>
+          </Block>
+        ))}
+        <ModalForm modal={modal} toggle={toggle} data={datas} />
       </Container>
     </Section>
   );

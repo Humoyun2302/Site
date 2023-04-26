@@ -33,7 +33,7 @@ function App() {
   //   email: "john@example.com",
   // };
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Navbar />
         <motion.div className="progress-bar" style={{ scaleX }} />

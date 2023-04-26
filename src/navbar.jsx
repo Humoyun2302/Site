@@ -88,8 +88,8 @@ const Navbar = () => {
         </Link>
 
         <List>
-          {links.map((item) => (
-            <li>
+          {links.map((item,i) => (
+            <li key={i}>
               <Links to={item.link}>{item.name}</Links>
             </li>
           ))}
