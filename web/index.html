@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>Gift Cards</title>
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<h1>Buy a Gift Card</h1>
+	</header>
+	<main class="container">
+		<section class="card">
+			<h2>Select amount</h2>
+			<div class="amount-grid" id="amountGrid">
+				<button data-amount="2500" class="amount">$25</button>
+				<button data-amount="5000" class="amount">$50</button>
+				<button data-amount="7500" class="amount">$75</button>
+				<button data-amount="10000" class="amount">$100</button>
+			</div>
+			<label class="input">
+				<span>Custom amount</span>
+				<input id="customAmount" inputmode="numeric" pattern="[0-9]*" placeholder="e.g., 60" />
+			</label>
+			<label class="input">
+				<span>Quantity</span>
+				<input id="quantity" inputmode="numeric" pattern="[0-9]*" value="1" />
+			</label>
+			<button id="buyButton" class="buy">Buy gift card</button>
+			<p id="error" class="error" hidden></p>
+		</section>
+	</main>
+	<script type="module" src="/script.js"></script>
+</body>
+</html>
